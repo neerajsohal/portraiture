@@ -1,0 +1,57 @@
+README
+
+
+Portraiture - Minimalistic WordPress Theme
+version: 0.3
+
+Table of Contents
+
+1. Introduction
+2. License
+3. Features
+4. Installation and Usage
+5. Credits
+6. Support and Feedback
+
+
+1. Introduction
+
+Portraiture is a minimalistic theme for wordpress. It's based on blueprintcss.
+
+I created this theme after struggling to find a good efficient minimalistic theme for wordpress. I was able to find a few but wasn't ever satisfied. So I decided to roll down my own theme. Hope you'll like my work.
+
+2. License
+
+Portraiture is released under Creative Commons license. To learn more Please refer to LICENSE.TXT file.
+
+
+3. Features
+
+Following are some features of Portraiture:
+
+# Supports Widgets
+# Has two saperate sidebars. One is default sidebar and second for single post page.
+# Minimalistic design
+# Based on blueprintcss so that you and neither e has to worry about cross browser rendering
+
+4. Installation
+
+To install this thee follow following instructions
+
+a. Unpack the contents of the file in yout 'themes' forlder of your wordpress installation.
+b. Login to the Adminstration Section of your Wordpress.
+c. Goto Appearance and And activate Portraiture
+
+5. Credits
+
+a. All the icons in this theme are sponsered by: http://webtoolkit4.me/
+b. Blueprintcss is used for this theme as a css framework: http://www.blueprintcss.org/
+
+6. Support and Feedback
+
+I would love to hear some comments from you guys. If you think I can improve somewhere then I would like to know where...
+
+If you are facing soe problems using this theme, I would like to help you.
+
+You can discuss about Portraiture at: http://www.neerajkumar.name/blog/topics/portraiture
+ 
