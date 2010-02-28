@@ -100,6 +100,7 @@ blockquote {
 .post {
 	padding-bottom: 1em;
 	border-bottom: 1px solid #eeeeee;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .post img {
 	max-width: 500px;

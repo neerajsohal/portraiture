@@ -4,6 +4,7 @@ class PT_CORE {
 	var $short_name = 'pt';
 	var $version = '0.3';
 	var $author = 'Neeraj Kumar';
+	var $link = "http://www.neerajkumar.name/blog/topics/portraiture";
 	
 	function get_linkback() {
 		echo "<span class='small'><a href='$this->link'>Powered by $this->name version $this->version</a></span>";
@@ -126,7 +127,7 @@ $pt = new PT_CORE;
 
 $options = array (
 
-	array(	"name" => "Welcome Message",
+	array(	"name" => "General Settings",
 			"type" => "title"),
 			
 	array(	"type" => "open"),
@@ -136,11 +137,11 @@ $options = array (
             "id" => $pt->short_name."_google_analytics",
             "type" => "textarea"),
 	
-	array(  "name" => "Color",
+	array(  "name" => "Color Scheme",
 			"desc" => "Select theme color ",
             "id" => $pt->short_name."_color",
             "type" => "select",
-            "options" => array('gray' => 'gray', 'blue' =>'blue')),
+            "options" => array('' => 'default', 'blue' => 'blue', 'brown' => 'brown')),
 	
 	array(	"type" => "close")
 	
@@ -185,9 +186,13 @@ function mytheme_admin() {
     
 ?>
 <div class="wrap">
-<h2><?php echo $pt->name; ?> settings</h2>
+<h2><?php echo $pt->name . " version " . $pt->version; ?> settings</h2>
 <?php
 $pt->render_options($options);
+?>
+<p><small><?php $pt->get_linkback();?> Developed By: <?php echo $pt->author; ?></small></p>
+</div>
+<?php
 }
 
 add_action('admin_menu', 'mytheme_add_admin'); ?>
