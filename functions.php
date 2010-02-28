@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/pt_init.php';
+require_once 'admin/pt_admin.php';
 
 if	 ( function_exists('register_sidebar') ) {
     register_sidebar(array('name' => 'Main Sidebar') );
