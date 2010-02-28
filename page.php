@@ -23,6 +23,6 @@
 	        <?php comments_template(); ?>
         </div>
 	</div>
-    <?php get_sidebar('single'); ?>
+    <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

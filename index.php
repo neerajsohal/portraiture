@@ -9,7 +9,7 @@
                 <p class="loud">Published on <span class="quiet"><?php the_time('h:m, d-m-Y'); ?></span></p>
                 <p class="loud">Author<span class="quiet"><?php the_author(); ?></span></p>
                 <p class="loud">Category<span class="quiet"><?php the_category(); ?></span></p>
-                <p class="quiet"><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', 'one', '% Comments'); ?></a></p>
+                <p class="quiet"><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', 'One Comment', '% Comments'); ?></a></p>
             </div>
             <div class="span-14 last content">
 				<?php the_content(); ?>

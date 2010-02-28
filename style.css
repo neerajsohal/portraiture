@@ -7,7 +7,13 @@ Author: Neeraj kumar a.k.a Codemaster Snake
 Tags: two-columns, fixed-width, light, white
 */
 
+/* Include Blueprint */
+
 @import url('css/blueprint/screen.css') screen;
+[if IE 6]
+@import url('css/blueprint/ie.css') screen;
+[endif]
+@import url('css/blueprint/print.css') print, projection;
 
 body {
 	background: #ffffff;
@@ -19,6 +25,18 @@ a {
 h1, h2, h3, h4, h5 ,h6 {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+h1 {
+	font-size: 2.2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.3em;
+}
 p {
 	line-height: 1.7em;
 }
@@ -28,6 +46,7 @@ blockquote {
 	background-repeat: no-repeat;	
 	margin-left: 0;
 	padding-left: 50px;
+	padding-top: .7em;
 }
 .rightText {
 	text-align: right;
@@ -35,19 +54,22 @@ blockquote {
 .leftText {
 	text-align: left;
 }
+/* WP Classes */
+.wp-caption-text {
+	font-style: italic;
+}
 .aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .alignleft {
 	float: left;
 }
-
 .alignright {
 	float: right;
 }
+
 /* menu */
 .menu {
 	border-bottom: 1px solid #eeeeee;
@@ -69,8 +91,7 @@ blockquote {
 	padding-right: 2em;
 }
 /* header */
-.header {
-
+.header_wrapper {
 }
 .topsearch {
 	padding-top: 1em;
@@ -97,7 +118,7 @@ ul.sidebar {
 	list-style: none;
 	margin-left: 0;
 	padding-left: 0;
-	font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	color: #555555;
 }
 ul.sidebar li ul {
 	padding-left: 0;
@@ -115,4 +136,18 @@ ul.sidebar h1, ul.sidebar h2, ul.sidebar h3, ul.sidebar h4, ul.sidebar h5, ul.si
 }
 ul.sidebar li.widget {
 	margin-bottom: 2em;
+}
+ul.sidebar p.gravatar{
+	margin-bottom: 0;
+}
+ul.sidebar p.gravatar img {
+	border: 1px solid #cccccc;
+}
+ul.sidebar p.nickname {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.2em;
+}
+ul.sidebar p.description {
+
 }
