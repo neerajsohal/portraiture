@@ -10,9 +10,16 @@
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/<?php echo get_option($pt->short_name . '_color'); ?>.css" type="text/css" media="screen" />
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<?php if(get_option($pt->short_name.'_feed_url')) { ?>
+<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option($pt->short_name.'_feed_url'); ?>" />
+<?php
+}
+else {
+?>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Comments Feed" href="<?php bloginfo('comments_rss2_url'); ?>" />
 <?php
+}
 wp_deregister_script( 'jquery' );
 wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js');
 wp_enqueue_script('jquery');
@@ -22,7 +29,7 @@ wp_head(); ?>
 <body <?php body_class(); ?>>
 
 <div class="container">
-	<div class=" header_wrapper"
+	<div class=" header_wrapper">
 	<div class="span-24 last menu">
     	<div class="span-14">
     	<ul>

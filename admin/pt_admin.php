@@ -142,7 +142,12 @@ $options = array (
             "id" => $pt->short_name."_color",
             "type" => "select",
             "options" => array('' => 'default', 'blue' => 'blue', 'brown' => 'brown')),
-	
+
+	array(  "name" => "Feed URL",
+			"desc" => "Enter the feed url for your blog. make sure you enter full url including http://<br/>eg. http://feeds.feedburner.com/neerajkumar/JOUP",
+            "id" => $pt->short_name."_feed_url",
+            "type" => "text"),
+
 	array(	"type" => "close")
 	
 );
