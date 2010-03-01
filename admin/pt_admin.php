@@ -148,6 +148,11 @@ $options = array (
             "id" => $pt->short_name."_feed_url",
             "type" => "text"),
 
+	array(  "name" => "Feedburner Email URI",
+			"desc" => "Enter your feedburner's email uri here. This will create a subscription form on your blog",
+            "id" => $pt->short_name."_feed_email_uri",
+            "type" => "text"),
+
 	array(	"type" => "close")
 	
 );
