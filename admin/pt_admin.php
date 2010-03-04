@@ -132,6 +132,11 @@ $options = array (
 			
 	array(	"type" => "open"),
 	
+	array(	"name" => "Home URL",
+			"desc" => "If you have also have a website besides this blog, then you can enter your website url and it will be displayed in top menu.<br/>eg. http://www.neerajkumar.name/",
+            "id" => $pt->short_name."_home_url",
+            "type" => "text"),
+
 	array(	"name" => "Google Analytics",
 			"desc" => "Enter Google Analytics code here to enable it.",
             "id" => $pt->short_name."_google_analytics",

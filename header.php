@@ -31,7 +31,7 @@ wp_head(); ?>
 <div class="container">
 	<div class=" header_wrapper">
 	<div class="span-24 last menu">
-    	<div class="span-14">
+    	<div class="span-18">
     	<ul>
 			<?php $args = array(
             'depth'        => 1,
@@ -46,11 +46,15 @@ wp_head(); ?>
             'sort_column'  => 'menu_order, post_title',
             'link_before'  => '',
             'link_after'   => '' ,
-            'exclude_tree' => '' ); ?> 
-			<?php wp_list_pages($args); ?> 
+            'exclude_tree' => '' ); 
+			global $pt;
+			if(get_option($pt->short_name . '_home_url')){
+				echo '<li><a href="'.get_option($pt->short_name . '_home_url').'">Home</a></li>' ;
+			}else echo "bad";
+			wp_list_pages($args); ?> 
         </ul>
         </div>
-        <div class="span-10 last rightText topsearch">
+        <div class="span-6 last rightText topsearch">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
             	<input type="text" name="s" id="s" /> <input type="submit" value="S" id="searchsubmit" class="btn" />
             </form>
