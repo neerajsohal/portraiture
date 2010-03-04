@@ -50,7 +50,7 @@ wp_head(); ?>
 			global $pt;
 			if(get_option($pt->short_name . '_home_url')){
 				echo '<li><a href="'.get_option($pt->short_name . '_home_url').'">Home</a></li>' ;
-			}else echo "bad";
+			}
 			wp_list_pages($args); ?> 
         </ul>
         </div>
