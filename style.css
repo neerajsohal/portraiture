@@ -17,8 +17,17 @@ body {
 a {
 	text-decoration: none;
 }
+a:focus {
+	outline: none
+}
 h1, h2, h3, h4, h5 ,h6 {
 
+}
+h1, h2 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", Times, serif;
+}
+h3, h4 {
+	text-transform: uppercase;
 }
 blockquote {
 	background-image:url(i/blockquote.png);
@@ -27,6 +36,9 @@ blockquote {
 	margin-left: 0;
 	padding-left: 50px;
 	padding-top: .7em;
+}
+ol li, ul li {
+	margin-bottom: .5em;
 }
 .rightText {
 	text-align: right;
@@ -37,6 +49,9 @@ blockquote {
 /* WP Classes */
 .wp-caption-text {
 	font-style: italic;
+}
+.wp-smiley {
+	border: none !important;
 }
 .aligncenter {
 	display: block;
@@ -81,9 +96,27 @@ blockquote {
 	padding-bottom: 1em;
 	border-bottom: 1px solid #eeeeee;
 }
+.single .post .content p:first-child {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 1.3em;
+}
+.post .title a {
+	display: block;
+	border-bottom: 1px dashed #ffffff;
+}
+.post .title a:hover {
+	padding-left: .3em;
+	margin-left: -0.3em;
+	border-bottom: 1px dashed;
+}
 .post img {
 	max-width: 500px;
 	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 3px solid #dddddd;
+	
 }
 .post .post_meta span {
 	display: block;

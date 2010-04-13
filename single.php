@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-	<div class="span-18">
+	<div class="span-18 single">
 		<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
         <div class="span-18 last post">
