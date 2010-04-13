@@ -6,10 +6,10 @@
         <div class="span-18 last post">
    	    	<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
         	<div class="span-3 prepend-1 post_meta">
-                <p class="quiet">Published on <span class="quiet"><?php the_time('h:m, d-m-Y'); ?></span></p>
-                <p class="quiet">Author<span class="quiet"><?php the_author(); ?></span></p>
-                <p class="quiet">Category<span class="quiet"><?php the_category(); ?></span></p>
-                <p class="quiet"><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', 'One Comment', '% Comments'); ?></a></p>
+                <p class="">Published on <span class="quiet"><?php the_time('h:m, d-m-Y'); ?></span></p>
+                <p class="">Author<span class="quiet"><?php the_author(); ?></span></p>
+                <p class="">Category<span class="quiet"><?php the_category(); ?></span></p>
+                <p class=""><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', 'One Comment', '% Comments'); ?></a></p>
             </div>
             <div class="span-14 last content">
 				<?php the_content(); ?>
