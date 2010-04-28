@@ -26,9 +26,25 @@ else {
 <?php
 }
 wp_deregister_script( 'jquery' );
+wp_deregister_script( 'cufon' );
+wp_deregister_script( 'cufon_font_gentium' );
+wp_deregister_script( 'site_js' );
+
 wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js');
+wp_register_script('cufon', 'http://cufon.shoqolate.com/js/cufon-yui.js');
+
+$cufon_font_gentium = get_bloginfo('template_url') . "/js/Gentium_400.font.js";
+wp_register_script('cufon_font_gentium', $cufon_font_gentium);
+
+$site_js = get_bloginfo('template_url') . "/js/site.js";
+wp_register_script('site_js', $site_js);
+
 wp_enqueue_script('jquery');
-wp_head(); ?>
+wp_enqueue_script('cufon');
+wp_enqueue_script('cufon_font_gentium');
+wp_enqueue_script('site_js');
+?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -66,8 +82,7 @@ wp_head(); ?>
         </div>
     </div>
 	<div class="span-24 last header">
-   		<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('title'); ?></a></h1>
-        <p><?php bloginfo('description'); ?></p>
+   		<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('title'); ?></a>
     </div>
     <hr class="space" />
     <hr class="space" />

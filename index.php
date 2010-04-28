@@ -4,7 +4,7 @@
 		<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
         <div class="span-18 last post">
-   	    	<h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+   	    	<h1 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
         	<div class="span-3 prepend-1 post_meta">
                 <p class="">Published on <span class="quiet"><?php the_time('h:m, d-m-Y'); ?></span></p>
                 <p class="">Author<span class="quiet"><?php the_author(); ?></span></p>

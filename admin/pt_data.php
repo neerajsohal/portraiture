@@ -1,7 +1,7 @@
 <?php
 
 $name = "Portraiture";
-$version = "0.3";
+$version = "0.4";
 $prefix = "pt_";
 
 
