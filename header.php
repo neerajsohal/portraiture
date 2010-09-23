@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -11,12 +11,9 @@
 <![ENDIF]-->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/blueprint/print.css" type="text/css" media="print" />
-<?php global $pt; ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/<?php echo get_option($pt->short_name . '_color'); ?>.css" type="text/css" media="screen" />
-
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<?php if(get_option($pt->short_name.'_feed_url')) { ?>
-<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option($pt->short_name.'_feed_url'); ?>" />
+<?php if(get_option('portraiture_feed_url')) { ?>
+<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('portraiture_feed_url'); ?>" />
 <?php
 }
 else {
@@ -68,9 +65,9 @@ wp_enqueue_script('site_js');
             'link_before'  => '',
             'link_after'   => '' ,
             'exclude_tree' => '' ); 
-			global $pt;
-			if(get_option($pt->short_name . '_home_url')){
-				echo '<li><a href="'.get_option($pt->short_name . '_home_url').'">Home</a></li>' ;
+			
+			if(get_option('portraiture_home_url')){
+				echo '<li><a href="'.get_option('portraiture_home_url').'">Home</a></li>' ;
 			}
 			wp_list_pages($args); ?> 
         </ul>
