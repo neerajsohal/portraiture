@@ -49,48 +49,6 @@ function run_diagnostics() {
             ?>
         </td>
     </tr>
-    <tr class="alternate">
-        <td>Logo</td><td>URL to Logo</td>
-        <td>
-            <?php
-            if(strlen(get_option('canvas_logo')) > 0) {
-                echo get_option('canvas_logo');
-            } else {
-                echo 'Not Set';
-            }
-            ?>
-        </td>
-        <td>
-            <?php
-            if(strlen(get_option('canvas_logo')) > 0) {
-                echo "<span style='color: #00cc00'>Passed</span>";
-            } else {
-                echo "<span style='color: #cc0000'>Failed</span>";
-            }
-            ?>
-        </td>
-    </tr>
-    <tr class="">
-        <td>Default Background</td><td>URL to default image</td>
-        <td>
-            <?php
-            if(strlen(get_option('canvas_default_page_bg')) > 0) {
-                echo get_option('canvas_default_page_bg');
-            } else {
-                echo 'Not Set';
-            }
-            ?>
-        </td>
-        <td>
-            <?php
-            if(strlen(get_option('canvas_default_page_bg')) > 0) {
-                echo "<span style='color: #00cc00'>Passed</span>";
-            } else {
-                echo "<span style='color: #cc0000'>Failed</span>";
-            }
-            ?>
-        </td>
-    </tr>
     </tbody>
     <tfoot>
     <tr>

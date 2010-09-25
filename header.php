@@ -11,6 +11,11 @@
 <![ENDIF]-->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/blueprint/print.css" type="text/css" media="print" />
+<?php
+if(get_option('portraiture_hyperlink_color')) {
+    echo '<style>a {color: '.get_option('portraiture_hyperlink_color').'}</style>';
+}
+?>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php if(get_option('portraiture_feed_url')) { ?>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('portraiture_feed_url'); ?>" />

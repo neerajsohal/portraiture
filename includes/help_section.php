@@ -1,6 +1,6 @@
 <?php
 
-function canvas_help() {
+function portraiture_help() {
 ?>
 <div class="wrap">
     <h2>Canvas Theme User Guide</h2>

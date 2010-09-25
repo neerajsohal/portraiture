@@ -33,7 +33,6 @@ blockquote {
     margin-left: 0;
     padding-left: 50px;
     padding-top: .7em;
-    font-size: 1.3em;
 }
 ol li, ul li {
     margin-bottom: .5em;
@@ -73,7 +72,7 @@ img.alignright {
 
 /* menu */
 .menu {
-    border-top:1px solid #ccc;
+    
 }
 .menu ul {
     padding: 0;
@@ -85,7 +84,7 @@ img.alignright {
 }
 .menu ul li a {
     display: block;
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: .5em;
     text-transform: uppercase;
 }
@@ -103,6 +102,10 @@ img.alignright {
 .topsearch {
     padding-top: 1em;
 }
+#searchform #s {
+    border: none;
+    border-bottom: 2px dotted #ccc;
+}
 /* posts */
 .post {
     padding-bottom: 1em;
@@ -114,7 +117,7 @@ img.alignright {
 .post .title a:hover {
 }
 .post img {
-    max-width: 500px;
+    max-width: 550px;
     height: auto;
     margin: 0;
     padding: 0;
