@@ -3,8 +3,7 @@
 function run_diagnostics() {
 ?>
 <div class="wrap">
-    <h2>Canvas Theme Diagnostics</h2>
-    <p>If you are facing problems using this theme like images are not showing, vidoe posts options are not appearing; then run this diagnostics tool. It will tell you whether you have corretly installed the theme or not and pinpointing the common errors.</p>
+    <h2>Portraiture Theme Diagnostics</h2>
     <br/>
 <table class="widefat">
     <thead>

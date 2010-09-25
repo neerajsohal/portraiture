@@ -9,7 +9,7 @@ Tags: two-columns, fixed-width, light, white
 
 body {
     background: #ffffff;
-    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
     font-size: 12px;
     border-top: 7px solid #eee;
 }
@@ -21,10 +21,7 @@ a:focus {
     outline: none
 }
 h1, h2 {
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-h3, h4 {
-    text-transform: uppercase;
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif,", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 blockquote {
     background-image:url(i/blockquote.png);
@@ -115,6 +112,9 @@ img.alignright {
 .post .title a {
 }
 .post .title a:hover {
+}
+.post .content {
+    font-size: 1.2em;
 }
 .post img {
     max-width: 550px;

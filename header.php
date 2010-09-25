@@ -11,9 +11,13 @@
 <![ENDIF]-->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
 <?php
 if(get_option('portraiture_hyperlink_color')) {
     echo '<style>a {color: '.get_option('portraiture_hyperlink_color').'}</style>';
+}
+if(get_option('portraiture_hyperlink_hover_color')) {
+    echo '<style>a:hover {color: '.get_option('portraiture_hyperlink_hover_color').'}</style>';
 }
 ?>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -30,20 +34,22 @@ else {
 wp_deregister_script( 'jquery' );
 wp_deregister_script( 'cufon' );
 wp_deregister_script( 'cufon_font_gentium' );
+wp_deregister_script( 'fancybox' );
 wp_deregister_script( 'site_js' );
 
 wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js');
 wp_register_script('cufon', 'http://cufon.shoqolate.com/js/cufon-yui.js');
-
 $cufon_font_gentium = get_bloginfo('template_url') . "/js/Gentium_400.font.js";
 wp_register_script('cufon_font_gentium', $cufon_font_gentium);
-
+$fancybox_js = get_bloginfo('template_url') . "/fancybox/jquery.fancybox-1.3.1.pack.js";
+wp_register_script('fancybox', $fancybox_js);
 $site_js = get_bloginfo('template_url') . "/js/site.js";
 wp_register_script('site_js', $site_js);
 
 wp_enqueue_script('jquery');
 wp_enqueue_script('cufon');
 wp_enqueue_script('cufon_font_gentium');
+wp_enqueue_script('fancybox');
 wp_enqueue_script('site_js');
 ?>
 <?php wp_head(); ?>
@@ -55,27 +61,7 @@ wp_enqueue_script('site_js');
 	<div class=" header_wrapper">
 	<div class="span-24 last menu">
     	<div class="span-18">
-    	<ul>
-			<?php $args = array(
-            'depth'        => 1,
-            'show_date'    => '',
-            'date_format'  => get_option('date_format'),
-            'child_of'     => 0,
-            'exclude'      => '',
-            'include'      => '',
-            'title_li'     => '',
-            'echo'         => 1,
-            'authors'      => '',
-            'sort_column'  => 'menu_order, post_title',
-            'link_before'  => '',
-            'link_after'   => '' ,
-            'exclude_tree' => '' ); 
-			
-			if(get_option('portraiture_home_url')){
-				echo '<li><a href="'.get_option('portraiture_home_url').'">Home</a></li>' ;
-			}
-			wp_list_pages($args); ?> 
-        </ul>
+        <?php wp_nav_menu( array( 'container' => '' ) ); ?>
         </div>
         <div class="span-6 last rightText topsearch">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>" >

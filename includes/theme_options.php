@@ -20,14 +20,6 @@ function portraiture_theme_options() {
                 </tr>
             </thead>
             <tbody>
-                <tr class="alternate">
-                    <td width="30%"><label for="portraiture_home_url">Home URL</label></td>
-                    <td width="70%">
-                        <input style="width: 100%" type="text" name="portraiture_home_url" id="portraiture_home_url" value="<?php echo get_option('portraiture_home_url'); ?>" />
-                        <p><small>If you have also have a website besides this blog, then you can enter your website url and it will be displayed in top menu.<br/>
-                                eg. http://www.neerajkumar.name/</small></p>
-                    </td>
-                </tr>
                 <tr>
                     <td width="30%"><label for="portraiture_google_analytics">Google Analytics Code</label></td>
                     <td width="70%">
@@ -57,7 +49,14 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
                         <p><small>Enter the HEX value of the color you want hyperlinks to be displayed in</small></p>
                     </td>
                 </tr>
-               <tr class="">
+                <tr class="">
+                    <td width="30%"><label for="portraiture_hyperlink_hover_color">Hyperlink Hover Color</label></td>
+                    <td width="70%">
+                        <input style="width: 100%" type="text" name="portraiture_hyperlink_hover_color" id="portraiture_hyperlink_hover_color" value="<?php echo get_option('portraiture_hyperlink_hover_color'); ?>" />
+                        <p><small>Enter the HEX value of the color you want hyperlinks to be displayed in when hovered</small></p>
+                    </td>
+                </tr>
+               <tr class="alternate">
                     <td colspan="2"><p><input type="submit" name="Submit" value="<?php _e('SAVE SETTINGS') ?>" class="button" /></p></td>
                 </tr>
             </tbody>
