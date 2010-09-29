@@ -38,6 +38,6 @@
             <?php comments_template(); ?>
                 </div>
             </div>
-    <?php get_sidebar('single'); ?>
-                </div>
+		    <?php get_sidebar('single'); ?>
+            </div>
 <?php get_footer(); ?>

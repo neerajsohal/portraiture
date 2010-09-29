@@ -1,4 +1,4 @@
-<div class="span-5 prepend-1 last small sidebar-default">
+<div class="span-5 prepend-1 last sidebar-default">
 	<ul class="sidebar">
     <li>
 <?php global $pt; if(get_option($pt->short_name.'_feed_url')) { ?>

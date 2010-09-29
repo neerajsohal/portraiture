@@ -3,8 +3,27 @@
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+<title><?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
 
+	wp_title( '|', true, 'right' );
+
+	// Add the blog name.
+	bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		echo " | $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+
+	?></title>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/blueprint/screen.css" type="text/css" media="screen" />
 <!-- [IF LTE IE 8] >
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/blueprint/ie.css" type="text/css" media="screen" />
@@ -20,7 +39,9 @@ if(get_option('portraiture_hyperlink_hover_color')) {
     echo '<style>a:hover {color: '.get_option('portraiture_hyperlink_hover_color').'}</style>';
 }
 ?>
+
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
 <?php if(get_option('portraiture_feed_url')) { ?>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php echo get_option('portraiture_feed_url'); ?>" />
 <?php
@@ -31,28 +52,21 @@ else {
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Comments Feed" href="<?php bloginfo('comments_rss2_url'); ?>" />
 <?php
 }
-wp_deregister_script( 'jquery' );
+?>
+<script src="<?php bloginfo('template_url');?>/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url');?>/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url');?>/fancybox/jquery.fancybox-1.3.1.pack.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url');?>/js/site.js" type="text/javascript"></script>
+<?php
 wp_deregister_script( 'cufon' );
 wp_deregister_script( 'cufon_font_gentium' );
-wp_deregister_script( 'fancybox' );
-wp_deregister_script( 'site_js' );
-
-wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js');
 wp_register_script('cufon', 'http://cufon.shoqolate.com/js/cufon-yui.js');
 $cufon_font_gentium = get_bloginfo('template_url') . "/js/Gentium_400.font.js";
 wp_register_script('cufon_font_gentium', $cufon_font_gentium);
-$fancybox_js = get_bloginfo('template_url') . "/fancybox/jquery.fancybox-1.3.1.pack.js";
-wp_register_script('fancybox', $fancybox_js);
-$site_js = get_bloginfo('template_url') . "/js/site.js";
-wp_register_script('site_js', $site_js);
-
-wp_enqueue_script('jquery');
 wp_enqueue_script('cufon');
 wp_enqueue_script('cufon_font_gentium');
-wp_enqueue_script('fancybox');
-wp_enqueue_script('site_js');
-?>
-<?php wp_head(); ?>
+
+wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>

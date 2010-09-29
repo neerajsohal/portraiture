@@ -7,10 +7,7 @@
             <p class="nickname loud"><strong><?php the_author_meta('display_name', get_the_author_id()); ?></strong></p>
             <p class="author_url">
             <a href="<?php the_author_meta('user_url', get_the_author_id()); ?>"><?php the_author_meta('user_url', get_the_author_id()); ?></a></p>
-            <p class="description">
-                <?php the_author_meta('description', get_the_author_id()); ?>
-            </p>
-            <p>Find more posts by <?php the_author_posts_link(); ?> </p>
+            <p>Read more about <?php the_author_posts_link(); ?> </p>
             <h3>SHARE THE LOVE</h3>
 
             <p><a tagret="_blank" href='<?php echo 'http://www.twitter.com/?status=' . urlencode(get_the_title()) . get_permalink(); ?>' title="twitter"><img src="<?php bloginfo('template_url'); ?>/i/twitter.png" /></a>

@@ -1,7 +1,7 @@
 /*
 Theme Name: Portraiture
 Theme URI: http://www.neerajkumar.name/
-Description: A Simple and efficient minimalistic theme for wordpress. It uses Blueprint and supports widgets.
+Description: Ultimate free wordpress theme for personal blogging.<br/><a href="?page=portraiture-options">Theme Settings</a>
 Version: 0.4
 Author: Neeraj kumar a.k.a Codemaster Snake
 Tags: two-columns, fixed-width, light, white
@@ -72,7 +72,8 @@ img.alignright {
     
 }
 .menu ul {
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 .menu ul li{
     list-style: none;
@@ -114,7 +115,7 @@ img.alignright {
 .post .title a:hover {
 }
 .post .content {
-    font-size: 1.2em;
+
 }
 .post img {
     max-width: 550px;

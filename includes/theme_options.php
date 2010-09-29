@@ -23,7 +23,7 @@ function portraiture_theme_options() {
                 <tr>
                     <td width="30%"><label for="portraiture_google_analytics">Google Analytics Code</label></td>
                     <td width="70%">
-                        <textarea style="width: 100%" type="text" name="portraiture_google_analytics" id="portraiture_google_analytics"><?php echo get_option('portraiture_google_analytics'); ?></textarea>
+                        <textarea style="width: 100%; height: 200px;" type="text" name="portraiture_google_analytics" id="portraiture_google_analytics"><?php echo get_option('portraiture_google_analytics'); ?></textarea>
                         <p><small>Enter Google Analytics code here to enable it.</small></p>
                     </td>
                 </tr>
