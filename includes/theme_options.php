@@ -69,6 +69,38 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
         <input type="hidden" name="action" value="update" />
         <input type="hidden" name="page_options" value="portraiture_home_url,portraiture_google_analytics,portraiture_feed_url,portraiture_feedburner_email_url,portraiture_hyperlink_color" />
     </form>
+    <h3> Share The Love!</h3>
+	<p>If you liked what I have done, then please spread the word!</p>
+	<table width="100%">
+            <tr>
+                <td>
+                    <a name="fb_share" type="box_count" share_url="http://portraiture.neerajkumar.name" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+                </td>
+                <td>
+                	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://portraiture.neerajkumar.name" data-count="vertical" data-via="codemastersnake">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                </td>
+                <td>
+                    <script type="text/javascript">
+                        (function() {
+                        var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = 'http://widgets.digg.com/buttons.js';
+                        s1.parentNode.insertBefore(s, s1);
+                        })();
+                        </script>
+                    <a class="DiggThisButton DiggMedium" href="<?php urlencode('http://portraiture.neerajkumar.name/'); ?>"></a>
+                </td>
+                <td>
+                    <a title="Post to Google Buzz" class="google-buzz-button" href="http://www.google.com/buzz/post" data-button-style="normal-count" data-url="http://portraiture.neerajkumar.name"></a>
+<script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
+                </td>
+                <td>
+                    <script src="http://www.stumbleupon.com/hostedbadge.php?s=5&r=http://portraiture.neerajkumar.name"></script>
+                </td>
+            </tr>
+
+        </table>
 </div>
 <?php
 }
