@@ -7,4 +7,4 @@ include_once "includes/menus.php";
 include_once "includes/meta_fields_user.php";
 include_once "includes/dashboard_widgets.php";
 
-include_once "includes/helper.php";
+include_once "lib/helper.php";
