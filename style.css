@@ -12,6 +12,7 @@ body {
     font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
     font-size: 12px;
     border-top: 7px solid #eee;
+    color: #555;
 }
 a {
     text-decoration: none;
@@ -40,6 +41,13 @@ ol li, ul li {
 .leftText {
     text-align: left;
 }
+.quiet {
+    color: #999999;
+}
+.loud {
+    color: #333333
+}
+h1, h2, h3, h4, h5, h6 {color:#444;}
 /* WP Classes */
 .wp-caption-text {
     font-style: italic;

@@ -89,7 +89,8 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
                         s1.parentNode.insertBefore(s, s1);
                         })();
                         </script>
-                    <a class="DiggThisButton DiggMedium" href="<?php urlencode('http://portraiture.neerajkumar.name/'); ?>"></a>
+                    <a class="DiggThisButton DiggMedium"
+href="http://digg.com/submit?url=http%3A//portraiture.neerajkumar.name"></a>
                 </td>
                 <td>
                     <a title="Post to Google Buzz" class="google-buzz-button" href="http://www.google.com/buzz/post" data-button-style="normal-count" data-url="http://portraiture.neerajkumar.name"></a>

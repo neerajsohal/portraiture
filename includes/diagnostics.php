@@ -25,8 +25,8 @@ function run_diagnostics() {
             ?>
         </td>
     </tr>
-    <tr class="">
-        <td>canvas_theme_foder/scripts/cache</td><td>Must be writable</td>
+    <!--<tr class="">
+        <td>portraiture_theme_foder/scripts/cache</td><td>Must be writable</td>
         <td>
 
             <?php
@@ -47,7 +47,7 @@ function run_diagnostics() {
             }
             ?>
         </td>
-    </tr>
+    </tr>//-->
     </tbody>
     <tfoot>
     <tr>
