@@ -2,7 +2,8 @@
 //// Create the function to output the contents of our Dashboard Widget
 
 function portraiture_dashboard_widget_function() {
-	portraiture_feed();
+	//portraiture_feed();
+	portraiture_check_for_updates();
 }
 
 // Create the function use in the action hook

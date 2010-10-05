@@ -29,7 +29,7 @@ function portraiture_feed($num = 5) {
                 if($ctr++ > 4) break;
                 
                 echo '<li>';
-				echo '<a class="rsswidget">'.$post->title.'</a> ';
+				echo '<a class="rsswidget" href="'.$post->link.'">'.$post->title.'</a> ';
                 echo '<span class="rss-date">'. date('M d, Y',strtotime($post->pubDate)).'</span>';
                 echo '<div class="rssSumarry">'.$post->description.'</div>';
                 echo '</li>';
@@ -37,4 +37,14 @@ function portraiture_feed($num = 5) {
 			echo "</ul></div>";
 		}
 	}
+}
+
+function portraiture_check_for_updates() {
+	portraiture_feed();
+}
+
+function fallback_wp_page_menu() {
+	echo '<ul class="menu">';
+	wp_list_pages(array('depth' => '-1', 'title_li' => null));
+	echo '</ul>';
 }

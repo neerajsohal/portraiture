@@ -75,11 +75,12 @@ wp_head(); ?>
 	<div class=" header_wrapper">
 	<div class="span-24 last menu">
     	<div class="span-18">
-        <?php wp_nav_menu( array( 'container' => '' ) ); ?>
+        <?php wp_nav_menu( array( 'container' => '', 'depth' => '1', 'fallback_cb' => 'fallback_wp_page_menu' ) ); ?>
         </div>
         <div class="span-6 last rightText topsearch">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
-            	<input type="text" name="s" id="s" /> <input type="submit" value="S" id="searchsubmit" class="btn" />
+				<?php $search_val = get_query_var('s') ? get_query_var('s') : "enter to search" ; ?>
+            	<input type="text" name="s" id="s" value="<?php echo $search_val; ?>" /> <input type="submit" value="S" id="searchsubmit"  class="btn" />
             </form>
         </div>
     </div>

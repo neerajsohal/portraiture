@@ -24,6 +24,9 @@ a:focus {
 h1, h2 {
     font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif,", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
+h2.title {
+	font-size: 3em;
+}
 blockquote {
     background-image:url(i/blockquote.png);
     background-position: left top;
