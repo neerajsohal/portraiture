@@ -9,10 +9,17 @@
 		        $curauth = get_userdata(intval($author));
 		    endif;
 	    ?>
-    <h2>Profile of <?php echo $curauth->display_name; ?></h2>
-    <p>
-    	<?php echo get_avatar($curauth->user_email, $size = '96'); ?>
-    </p>
+    <div class="span-18 last">
+	    <h2>Profile of <?php echo $curauth->display_name; ?></h2>
+	    <div class="span-3">
+		    <p>
+		    	<?php echo get_avatar($curauth->user_email, $size = '96'); ?>
+		    </p>
+	    </div>
+	    <div class="span-15 last">
+	    	<?php echo get_the_author_meta('description', $curauth->ID) ?>
+	    </div>
+    </div>
     <p>
     	<a href="http://twitter.com/<?php echo get_the_author_meta('twitter', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/facebook.png" title="Find <?php echo $curauth->display_name; ?> on Facebook" /></a> 
     	<a href="http://facebook.com/<?php echo get_the_author_meta('facebook', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/twitter.png" title="Find <?php echo $curauth->display_name; ?> on Twitter" /></a> 
@@ -40,6 +47,12 @@
     	<?php endwhile; else: ?>
         <p><?php _e('No posts by this author.'); ?></p>
     	<?php endif; ?>
+	</div>
+	<div class="span-6 last">
+		<?php if(get_option('portraiture_flickr_api_key') && get_option('portraiture_flickr_screenname')) { ?>
+			<h3>My Flicks From Flickr</h3>
+			<?php flickr_stream(); ?>
+		<?php } ?>
 	</div>
 	</div>
     <?php get_sidebar(); ?>

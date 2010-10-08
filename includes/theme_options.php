@@ -36,12 +36,24 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
                     </td>
                 </tr>
                 <tr class="">
+                    <td width="30%"><label for="portraiture_flickr_api_key">Your Flickr API Key</label></td>
+                    <td width="70%">
+                        <input style="width: 100%" type="text" name="portraiture_flickr_api_key" id="portraiture_flickr_api_key" value="<?php echo get_option('portraiture_flickr_api_key'); ?>" />
+                        <p><small>Enter your Flickr API key here. Visit here to get one for yourself.</small></p>
+                    </td>
+                <tr class="alternate">
+                    <td width="30%"><label for="portraiture_flickr_screenname">Your Flickr Screen Name</label></td>
+                    <td width="70%">
+                        <input style="width: 100%" type="text" name="portraiture_flickr_screenname" id="portraiture_flickr_screenname" value="<?php echo get_option('portraiture_flickr_screenname'); ?>" />
+                        <p><small>Enter your screen name at Flickr here. NOTE: this is not your Yahoo login id.</small></p>
+                    </td>
+                </tr>
+                <tr class="">
                     <td width="30%"><label for="portraiture_hyperlink_color">Hyperlink Color</label></td>
                     <td width="70%">
                         <input style="width: 100%" type="text" name="portraiture_hyperlink_color" id="portraiture_hyperlink_color" value="<?php echo get_option('portraiture_hyperlink_color'); ?>" />
                         <p><small>Enter the HEX value of the color you want hyperlinks to be displayed in</small></p>
                     </td>
-                </tr>
                 <tr class="alternate">
                     <td width="30%"><label for="portraiture_hyperlink_hover_color">Hyperlink Hover Color</label></td>
                     <td width="70%">
@@ -60,7 +72,7 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
             </tfoot>
         </table>
         <input type="hidden" name="action" value="update" />
-        <input type="hidden" name="page_options" value="portraiture_home_url,portraiture_google_analytics,portraiture_feed_url,portraiture_hyperlink_color" />
+        <input type="hidden" name="page_options" value="portraiture_home_url,portraiture_google_analytics,portraiture_flickr_api_key,portraiture_flickr_screenname,portraiture_feed_url,portraiture_hyperlink_color" />
     </form>
     <h3> Share The Love!</h3>
 	<p>If you liked what I have done, then please spread the word!</p>
