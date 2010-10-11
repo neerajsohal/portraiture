@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-	<div class="span-18">
+	<div class="span-18 content">
 		<?php
 	       	function new_excerpt_length($length) {
 				return 20;

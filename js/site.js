@@ -9,4 +9,5 @@ $(document).ready(function(){
     $('#searchform #s').click(function(){
     	$(this).val('');
    	})
+   	$('img').parent('a').css('border', 'none');
 });

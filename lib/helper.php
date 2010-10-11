@@ -16,18 +16,18 @@ function twitter_feed($username, $num = 5) {
 	}
 }
 
-function flickr_stream() {
+function flickr_stream($username) {
 	require_once("phpflickr/phpFlickr.php");
 	$phpFlickrObj = new phpFlickr(get_option('portraiture_flickr_api_key'));
 	$phpFlickrObj->enableCache("fs", "../scripts/cache");
-	$user = $phpFlickrObj->people_findByUsername(get_option('portraiture_flickr_screenname'));
+	$user = $phpFlickrObj->people_findByUsername($username);
 	$user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 	$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, NULL, 9);
 	
 	foreach ($photos['photos']['photo'] as $photo)
 	{
 	  echo '<a href="'.$user_url.$photo['id'].'" title="'.$photo['title'].' (on Flickr)" target="_blank">';
-	  echo '<img style="width: 70px; height: 70px; margin: 1px; padding: 1px; border: 1px solid #777; background: #fff;" class="wp-image" alt="'.$photo['title'].'" src="'.$phpFlickrObj->buildPhotoURL($photo, "square").'" />';
+	  echo '<img style="width: 64px; height: 64px; margin: 1px; padding: 2px; border: 3px solid #ddd; background: #fff;" class="wp-image" alt="'.$photo['title'].'" src="'.$phpFlickrObj->buildPhotoURL($photo, "square").'" />';
 	  echo '</a>';
 	}
 }

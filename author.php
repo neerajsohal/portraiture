@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container">
-	<div class="span-18">
+	<div class="span-18 content">
 	    <?php
 		    if(isset($_GET['author_name'])) :
 		        $curauth = get_user_by('slug', $author_name);
@@ -21,13 +21,21 @@
 	    </div>
     </div>
     <p>
+    <?php if(get_the_author_meta('twitter', $curauth->ID)) { ?>
     	<a href="http://twitter.com/<?php echo get_the_author_meta('twitter', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/facebook.png" title="Find <?php echo $curauth->display_name; ?> on Facebook" /></a> 
+   	<?php } if(get_the_author_meta('facebook', $curauth->ID)) { ?>
     	<a href="http://facebook.com/<?php echo get_the_author_meta('facebook', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/twitter.png" title="Find <?php echo $curauth->display_name; ?> on Twitter" /></a> 
+   	<?php } if(get_the_author_meta('linkedin', $curauth->ID)) { ?>
     	<a href="<?php echo get_the_author_meta('linkedin', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/linkedin.png" title="Find <?php echo $curauth->display_name; ?> on Linkedin" /></a> 
+   	   	<?php } if(get_the_author_meta('facebook', $curauth->ID)) { ?>
+    	<a href="<?php echo get_the_author_meta('flickr', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/flickr.png" title="Find <?php echo $curauth->display_name; ?> on Flickr" /></a> 
+		<?php } ?>
 	</p>
 	<div class="span-6">
+		<?php if(get_the_author_meta('twitter', $curauth->ID)) { ?>
 		<h3>Latest From Twitter</h3>
-		<?php twitter_feed( get_the_author_meta('twitter', $curauth->ID)); ?>
+		<?php twitter_feed(get_the_author_meta('twitter', $curauth->ID)); ?>
+		<?php } ?>
 	</div>
 	<div class="span-6">
 		<?php
@@ -49,9 +57,9 @@
     	<?php endif; ?>
 	</div>
 	<div class="span-6 last">
-		<?php if(get_option('portraiture_flickr_api_key') && get_option('portraiture_flickr_screenname')) { ?>
+		<?php if(get_option('portraiture_flickr_api_key') && get_the_author_meta('flickr', $curauth->ID)) { ?>
 			<h3>My Flicks From Flickr</h3>
-			<?php flickr_stream(); ?>
+			<?php flickr_stream(get_the_author_meta('flickr', $curauth->ID)); ?>
 		<?php } ?>
 	</div>
 	</div>

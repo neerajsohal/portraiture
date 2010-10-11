@@ -23,6 +23,13 @@ function my_show_extra_profile_fields( $user ) { ?>
 			</td>
 		</tr>
 		<tr>
+			<th><label for="facebook">Flickr</label></th>
+			<td>
+				<input type="text" name="flickr" id="flickr" value="<?php echo esc_attr( get_the_author_meta( 'flickr', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please enter your Flickr Screename.</span>
+			</td>
+		</tr>
+		<tr>
 			<th><label for="linkedin">Linkedin</label></th>
 			<td>
 				<input type="text" name="linkedin" id="linkedin" value="<?php echo esc_attr( get_the_author_meta( 'linkedin', $user->ID ) ); ?>" class="regular-text" /><br />
@@ -45,4 +52,5 @@ function my_save_extra_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'twitter', $_POST['twitter'] );
 	update_usermeta( $user_id, 'facebook', $_POST['facebook'] );
 	update_usermeta( $user_id, 'linkedin', $_POST['linkedin'] );
+	update_usermeta( $user_id, 'flickr', $_POST['flickr'] );
 }

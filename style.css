@@ -21,6 +21,15 @@ a {
 a:focus {
     outline: none
 }
+a:visited {
+	color: #444;
+}
+a {
+	border-bottom: 1px dotted;
+}
+.title a, .title a {
+	border: none
+}
 h1, h2 {
     font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif,", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
@@ -96,8 +105,9 @@ img.alignright {
     font-size: 1.1em;
     padding: .5em;
     text-transform: uppercase;
+    border: none;
 }
-.menu ul li.current_page_item {
+.menu ul li.current_page_item, .menu ul li:hover {
     background: #eee;
 }
 /* header */
@@ -107,6 +117,9 @@ img.alignright {
     font-size: 5em;
     margin-top: .5em;
     margin-bottom: 1.5em;
+}
+.header a {
+	border: none;
 }
 .topsearch {
     padding-top: 1em;
@@ -118,22 +131,15 @@ img.alignright {
 /* posts */
 .post {
     padding-bottom: 1em;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #ddd;
     margin-bottom: 1.5em;
 }
-.post .title a {
-}
-.post .title a:hover {
-}
-.post .content {
-
-}
 .post img {
-    max-width: 550px;
+    max-width: 545px;
     height: auto;
     margin: 0;
     padding: 0;
-    border: 3px solid #dddddd;
+    border: 5px solid #dddddd;
 }
 .post .post_meta ul.post-categories {
     list-style: none;
