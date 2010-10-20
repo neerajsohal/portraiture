@@ -88,21 +88,16 @@ img.alignright {
 }
 
 /* menu */
-.menu {
-    
-}
 .menu ul {
-    padding: 0px;
-    margin: 0px;
+    padding: 0px; margin: 0px;
+    list-style: none;
 }
 .menu ul li{
-    list-style: none;
-    float: left;
-    display: inline;
+    display: inline-block;
 }
 .menu ul li a {
     display: block;
-    font-size: 1.1em;
+    font-size: 1em;
     padding: .5em;
     text-transform: uppercase;
     border: none;

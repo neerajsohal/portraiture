@@ -61,6 +61,6 @@ function portraiture_check_for_updates() {
 
 function fallback_wp_page_menu() {
 	echo '<ul class="menu">';
-	wp_list_pages(array('depth' => '-1', 'title_li' => null));
+	wp_list_pages(array('depth' => '1', 'title_li' => null));
 	echo '</ul>';
 }
