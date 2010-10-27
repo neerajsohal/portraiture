@@ -56,7 +56,7 @@ function portraiture_feed($num = 5) {
 }
 
 function portraiture_check_for_updates() {
-	portraiture_feed();
+	echo "yahoo";
 }
 
 function fallback_wp_page_menu() {

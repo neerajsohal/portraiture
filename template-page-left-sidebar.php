@@ -1,6 +1,11 @@
-<?php get_header(); ?>
+<?php
+/*
+ * Template Name: Page With Left Sidebar
+ */
+ get_header(); ?>
 <div class="container">
-	<div class="span-18 content">
+    <?php get_sidebar(); ?>
+	<div class="span-18 content last">
 		<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
         <div class="span-18 last post">
@@ -20,6 +25,5 @@
 	        <?php comments_template(); ?>
         </div>
 	</div>
-    <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
