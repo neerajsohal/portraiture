@@ -36,18 +36,13 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
                     </td>
                 </tr>
                 <tr class="">
-                    <td width="30%"><label for="portraiture_flickr_api_key">Your Flickr API Key</label></td>
-                    <td width="70%">
-                        <input style="width: 100%" type="text" name="portraiture_flickr_api_key" id="portraiture_flickr_api_key" value="<?php echo get_option('portraiture_flickr_api_key'); ?>" />
-                        <p><small>Enter your Flickr API key here. Visit here to get one for yourself.</small></p>
-                    </td>
-                <tr class="alternate">
                     <td width="30%"><label for="portraiture_hyperlink_color">Hyperlink Color</label></td>
                     <td width="70%">
                         <input style="width: 100%" type="text" name="portraiture_hyperlink_color" id="portraiture_hyperlink_color" value="<?php echo get_option('portraiture_hyperlink_color'); ?>" />
                         <p><small>Enter the HEX value of the color you want hyperlinks to be displayed in</small></p>
                     </td>
-                <tr class="">
+                </tr>
+                <tr class="alternate">
                     <td width="30%"><label for="portraiture_hyperlink_hover_color">Hyperlink Hover Color</label></td>
                     <td width="70%">
                         <input style="width: 100%" type="text" name="portraiture_hyperlink_hover_color" id="portraiture_hyperlink_hover_color" value="<?php echo get_option('portraiture_hyperlink_hover_color'); ?>" />

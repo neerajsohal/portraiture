@@ -16,10 +16,10 @@ function twitter_feed($username, $num = 5) {
 	}
 }
 
-function flickr_stream($username) {
+function flickr_stream($username, $api_key) {
 	require_once("phpflickr/phpFlickr.php");
-	$phpFlickrObj = new phpFlickr(get_option('portraiture_flickr_api_key'));
-	$phpFlickrObj->enableCache("fs", "../scripts/cache");
+	$phpFlickrObj = new phpFlickr($api_key);
+	/* $phpFlickrObj->enableCache("fs", "../scripts/cache"); */
 	$user = $phpFlickrObj->people_findByUsername($username);
 	$user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 	$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, NULL, 9);

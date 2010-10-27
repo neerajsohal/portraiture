@@ -25,8 +25,21 @@ function run_diagnostics() {
             ?>
         </td>
     </tr>
+    <tr class="alternate">
+        <td>PHP CURL</td><td>Must be Available</td><td><?php echo (function_exists('curl_init'))? 'Available' : 'Not Available' ?></td>
+        <td>
+            <?php if(function_exists('curl_init')) {
+                echo "<span style='color: #00cc00'>Passed</span>";
+            }
+            else {
+                echo "<span style='color: #cc0000'>Failed</span>";
+
+            }
+            ?>
+        </td>
+    </tr>
     <tr class="">
-        <td>portraiture_theme_foder/scripts/cache</td><td>Must be writable</td>
+        <td>&lt;portraiture_theme_foder&gt;/scripts/cache</td><td>Must be Writable</td>
         <td>
 
             <?php

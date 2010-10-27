@@ -36,6 +36,14 @@ function my_show_extra_profile_fields( $user ) { ?>
 				<span class="description">Please enter your Linkedin Profile URL.</span>
 			</td>
 		</tr>
+		
+		<tr>
+			<th><label for="flickr_api_key">Your Flickr API Key</label></th>
+			<td>
+				<input type="text" name="flickr_api_key" id="flickr_api_key" value="<?php echo esc_attr( get_the_author_meta( 'flickr_api_key', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please enter your Linkedin Profile URL.</span>
+			</td>
+		</tr>
 
 	</table>
 <?php }
@@ -53,4 +61,5 @@ function my_save_extra_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'facebook', $_POST['facebook'] );
 	update_usermeta( $user_id, 'linkedin', $_POST['linkedin'] );
 	update_usermeta( $user_id, 'flickr', $_POST['flickr'] );
+	update_usermeta( $user_id, 'flickr_api_key', $_POST['flickr_api_key'] );
 }

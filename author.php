@@ -59,7 +59,7 @@
 	<div class="span-6 last">
 		<?php if(get_option('portraiture_flickr_api_key') && get_the_author_meta('flickr', $curauth->ID)) { ?>
 			<h3>My Flicks From Flickr</h3>
-			<?php flickr_stream(get_the_author_meta('flickr', $curauth->ID)); ?>
+			<?php flickr_stream(get_the_author_meta('flickr', $curauth->ID), get_the_author_meta('flickr_api_key', $curauth->ID)); ?>
 		<?php } ?>
 	</div>
 	</div>
