@@ -1,6 +1,3 @@
 <?php
 
-$portraiture = array(
-	"version" => '0.4',
-	"released" => '2010-10-01'
-);
+$portraiture = get_theme_data( ABSPATH . "wp-content/themes/portraiture/style.css" );

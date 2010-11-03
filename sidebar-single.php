@@ -1,3 +1,4 @@
+<?php global $post; ?>
 <div class="span-5 prepend-1 last sidebar-single">
     <ul class="sidebar">
         <li>
@@ -9,7 +10,7 @@
             <a href="<?php the_author_meta('user_url', get_the_author_id()); ?>"><?php the_author_meta('user_url', get_the_author_id()); ?></a></p>
             <p>Read more about <?php the_author_posts_link(); ?> </p>
             <h3>Share The Love</h3>
-            <p><a tagret="_blank" href='<?php echo 'http://www.twitter.com/?status=' . urlencode(get_the_title()) . get_permalink(); ?>' title="twitter"><img src="<?php bloginfo('template_url'); ?>/i/twitter.png" /></a>
+            <p><a tagret="_blank" href="<?php echo 'http://www.twitter.com/?status=' . get_the_title() . ' ' . get_bloginfo('url') ?>/?post_id=<?php echo $post->ID ?>" title="twitter"><img src="<?php bloginfo('template_url'); ?>/i/twitter.png" /></a>
                 <a tagret="_blank" href='<?php echo 'http://www.facebook.com/share.php?u=' . get_permalink() . '&t=' . urlencode(get_the_title()); ?>' title="facebook"><img src="<?php bloginfo('template_url'); ?>/i/facebook.png" /></a>
                 <a tagret="_blank" href='<?php echo 'http://www.stumbleupon.com/submit?url=' . get_permalink(); ?>' title="stumbleupon"><img src="<?php bloginfo('template_url'); ?>/i/stumbleupon.png" /> </a>
                 <a tagret="_blank" href='<?php echo 'http://delicious.com/post?url=' . get_permalink(); ?>' title="delicious"><img src="<?php bloginfo('template_url'); ?>/i/delicious.png" /> </a>

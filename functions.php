@@ -9,5 +9,6 @@ include_once "includes/menus.php";
 include_once "includes/meta_fields_user.php";
 include_once "includes/dashboard_widgets.php";
 include_once "includes/updates.php";
+include_once "includes/notifications.php";
 
 include_once "lib/helper.php";

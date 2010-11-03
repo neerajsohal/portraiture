@@ -22,13 +22,19 @@
     </div>
     <p>
     <?php if(get_the_author_meta('twitter', $curauth->ID)) { ?>
-    	<a href="http://twitter.com/<?php echo get_the_author_meta('twitter', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/facebook.png" title="Find <?php echo $curauth->display_name; ?> on Facebook" /></a> 
+    	<a href="http://facebook.com/<?php echo get_the_author_meta('twitter', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/facebook.png" title="Find <?php echo $curauth->display_name; ?> on Facebook" /></a> 
    	<?php } if(get_the_author_meta('facebook', $curauth->ID)) { ?>
-    	<a href="http://facebook.com/<?php echo get_the_author_meta('facebook', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/twitter.png" title="Find <?php echo $curauth->display_name; ?> on Twitter" /></a> 
+    	<a href="http://twitter.com/<?php echo get_the_author_meta('facebook', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/twitter.png" title="Find <?php echo $curauth->display_name; ?> on Twitter" /></a> 
    	<?php } if(get_the_author_meta('linkedin', $curauth->ID)) { ?>
     	<a href="<?php echo get_the_author_meta('linkedin', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/linkedin.png" title="Find <?php echo $curauth->display_name; ?> on Linkedin" /></a> 
    	   	<?php } if(get_the_author_meta('facebook', $curauth->ID)) { ?>
-    	<a href="<?php echo get_the_author_meta('flickr', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/flickr.png" title="Find <?php echo $curauth->display_name; ?> on Flickr" /></a> 
+    	<a href="http://flickr.com/photos/<?php echo get_the_author_meta('flickr', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/flickr.png" title="Find <?php echo $curauth->display_name; ?> on Flickr" /></a> 
+   	   	<?php } if(get_the_author_meta('lastfm', $curauth->ID)) { ?>
+    	<a href="http://last.fm/user/<?php echo get_the_author_meta('lastfm', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/lastfm.png" title="Find <?php echo $curauth->display_name; ?> on Last FM" /></a> 
+   	   	<?php } if(get_the_author_meta('digg', $curauth->ID)) { ?>
+    	<a href="http://digg.com/<?php echo get_the_author_meta('digg', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/digg.png" title="Find <?php echo $curauth->display_name; ?> on Digg" /></a> 
+   	   	<?php } if(get_the_author_meta('delicious', $curauth->ID)) { ?>
+    	<a href="http://delicious.com/<?php echo get_the_author_meta('delicious', $curauth->ID); ?>"><img src="<?php bloginfo('template_url');?>/i/delicious.png" title="Find <?php echo $curauth->display_name; ?> on Delicious" /></a> 
 		<?php } ?>
 	</p>
 	<div class="span-6">
@@ -57,7 +63,7 @@
     	<?php endif; ?>
 	</div>
 	<div class="span-6 last">
-		<?php if(get_option('portraiture_flickr_api_key') && get_the_author_meta('flickr', $curauth->ID)) { ?>
+		<?php if(get_the_author_meta('flickr_api_key', $curauth->ID) && get_the_author_meta('flickr', $curauth->ID)) { ?>
 			<h3>My Flicks From Flickr</h3>
 			<?php flickr_stream(get_the_author_meta('flickr', $curauth->ID), get_the_author_meta('flickr_api_key', $curauth->ID)); ?>
 		<?php } ?>

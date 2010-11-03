@@ -1,18 +1,14 @@
 <?php
-
 function portraiture_updates() {
-	global $portraiture;
 ?>
 <div class="wrap">
     <h2>Portraiture Theme Updates</h2>
     
 <?php
-	$update_info = json_decode(@file_get_contents("http://localhost/portraiture_version.json"));
-	
-	if(version_compare($update_info->version, $portraiture['version']) >= 1) {
+	if(is_update_available()) {
 ?>
 	<h3>New Version of Portraiture is Available.</h3>
-	<a href="<?php echo $update_info->download_link; ?>" class="button" >Download <?php echo $update_info->version ?></a> released on: <?php echo date('d M Y', $update_info->released); ?>
+	<a href="<?php echo $update_info->download_link; ?>" class="button" >Download <?php echo $update_info->version ?></a> released on: <?php echo date('D d M Y', strtotime($update_info->released)); ?>
 <?php
 	} else {
 ?>
@@ -55,5 +51,22 @@ href="http://digg.com/submit?url=http%3A//portraiture.neerajkumar.name"></a>
 	<h4>Release Information about version <?php echo $update_info->version; ?></h4>
 	<?php echo $update_info->release_info; ?>
 </div>
+<?php
+}
+
+function is_update_available() {
+	global $portraiture;
+
+	$update_info = json_decode(@file_get_contents("http://portraiture.neerajkumar.name/portraiture_version.json"));
+	if(version_compare($update_info->version, $portraiture['Version']) >= 1) {
+		return 1;
+	} else return 0;
+}
+
+function portraiture_update_notification() {
+?>
+	<div class="updated">
+		<p>A New Version of Portraiture Theme is available. Click <a href="admin.php?page=portraiture-updates">here</a> to update.</p>
+	</div>
 <?php
 }

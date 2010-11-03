@@ -59,12 +59,12 @@ else {
 <script src="<?php bloginfo('template_url');?>/js/site.js" type="text/javascript"></script>
 <?php
 wp_deregister_script( 'cufon' );
-wp_deregister_script( 'cufon_font_gentium' );
+wp_deregister_script( 'cufon_font' );
 wp_register_script('cufon', 'http://cufon.shoqolate.com/js/cufon-yui.js');
-$cufon_font_gentium = get_bloginfo('template_url') . "/js/Gentium_400.font.js";
-wp_register_script('cufon_font_gentium', $cufon_font_gentium);
+$cufon_font = get_option('portraiture_cufon_font');
+wp_register_script('cufon_font', $cufon_font);
 wp_enqueue_script('cufon');
-wp_enqueue_script('cufon_font_gentium');
+wp_enqueue_script('cufon_font');
 
 wp_head(); ?>
 </head>

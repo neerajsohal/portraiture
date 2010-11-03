@@ -6,7 +6,7 @@
 	<hr class="space" />
     <blockquote><big><big>oops! I have looked for it everywhere, couldn't find it anywhere.<br />
 Please don't tell my site owner that I failed you. I am still working on it.</big></big></blockquote>
-    <p>If this problem persists, kindly contact <a href="mailto:<?php bloginfo('admin_email'); ?>">Administrator</a>! Trust me, He's a good guy and will help you.</p>
+    <p>If this problem persists, kindly contact <a href="mailto:<?php echo get_option('admin_email'); ?>">Administrator</a>! Trust me, He's a good guy and will help you.</p>
 	<hr class="space" />
 	<hr class="space" />
     <h2>You can also try going to other sections of this website</h2>

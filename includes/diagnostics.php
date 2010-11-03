@@ -1,6 +1,5 @@
 <?php
-
-function run_diagnostics() {
+function portraiture_diagnostics() {
 ?>
 <div class="wrap">
     <h2>Portraiture Theme Diagnostics</h2>
@@ -39,11 +38,10 @@ function run_diagnostics() {
         </td>
     </tr>
     <tr class="">
-        <td>&lt;portraiture_theme_foder&gt;/scripts/cache</td><td>Must be Writable</td>
+        <td>&lt;portraiture_theme_foder&gt;/cache</td><td>Must be Writable</td>
         <td>
-
             <?php
-            if(is_writable(dirname(dirname(__FILE__) . '/../scripts/cache'))) {
+            if(is_writable(dirname(dirname(__FILE__) . '/../cache/.'))) {
                 echo 'Writable';
             } else {
                 echo 'Not Writable';
@@ -52,7 +50,7 @@ function run_diagnostics() {
         </td>
         <td>
             <?php
-            if(is_writable(dirname(dirname(__FILE__) . '/../scripts/cache'))) {
+            if(is_writable(dirname(dirname(__FILE__) . '/../cache/.'))) {
                 echo "<span style='color: #00cc00'>Passed</span>";
             }
             else {

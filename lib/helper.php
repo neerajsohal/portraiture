@@ -19,7 +19,7 @@ function twitter_feed($username, $num = 5) {
 function flickr_stream($username, $api_key) {
 	require_once("phpflickr/phpFlickr.php");
 	$phpFlickrObj = new phpFlickr($api_key);
-	/* $phpFlickrObj->enableCache("fs", "../scripts/cache"); */
+	$phpFlickrObj->enableCache("fs", TEMPLATEPATH . "/cache"); 
 	$user = $phpFlickrObj->people_findByUsername($username);
 	$user_url = $phpFlickrObj->urls_getUserPhotos($user['id']);
 	$photos = $phpFlickrObj->people_getPublicPhotos($user['id'], NULL, NULL, 9);
@@ -32,8 +32,8 @@ function flickr_stream($username, $api_key) {
 	}
 }
 
-function portraiture_feed($num = 5) {
-	$rssUrl = "http://feeds.feedburner.com/wp-portraiture";
+function neerajkumar_name_feed($num = 5) {
+	$rssUrl = "http://feeds.feedburner.com/neerajkumar/JOUP";
 	$rss = @file_get_contents($rssUrl);
 	if($rss) {
 		$xml = @simplexml_load_string($rss);
@@ -42,7 +42,8 @@ function portraiture_feed($num = 5) {
 			echo "<div class='rss-widget'>";
 			echo "<ul>";                
 			foreach($xml->channel->item as $post) {
-                if($ctr++ > 4) break;
+
+                if($ctr++ >= 4) break;
                 
                 echo '<li>';
 				echo '<a class="rsswidget" href="'.$post->link.'">'.$post->title.'</a> ';
@@ -53,10 +54,6 @@ function portraiture_feed($num = 5) {
 			echo "</ul></div>";
 		}
 	}
-}
-
-function portraiture_check_for_updates() {
-	echo "yahoo";
 }
 
 function fallback_wp_page_menu() {

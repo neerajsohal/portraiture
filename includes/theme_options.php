@@ -6,7 +6,7 @@ function portraiture_theme_options() {
         <h2>Portraiture Theme Options</h2>
     <?php
     if ($_GET['updated'] == 'true') {
-        echo '<div class="updated"><p>Settings Updted</p></div>';
+        echo '<div class="updated"><p>Settings Updated</p></div>';
     }
     ?>
     <br/>
@@ -20,6 +20,46 @@ function portraiture_theme_options() {
                 </tr>
             </thead>
             <tbody>
+                <tr class="alternate">
+                    <td width="30%"><label for="portraiture_cufon_font">Font</label></td>
+                    <td width="70%">
+                    	<select name="portraiture_cufon_font" id="portraiture_cufon_font">
+                    		<option value="<?php bloginfo('template_url'); ?>/fonts/Gentium_400.font.js"
+                    		<?php
+                    			if(get_option('portraiture_cufon_font') == get_bloginfo('template_url') . "/fonts/Gentium_400.font.js") 
+                    			{
+                    				echo "selected=selected"; 
+                    			}
+                    		?>
+                    		>Gentium</option>
+                    		<option value="<?php bloginfo('template_url'); ?>/fonts/Vollkorn_Regular_400-Vollkorn_Bold_700.font.js"
+                    		<?php
+                    			if(get_option('portraiture_cufon_font') == get_bloginfo('template_url') . "/fonts/Vollkorn_Regular_400-Vollkorn_Bold_700.font.js") 
+                    			{
+                    				echo "selected=selected"; 
+                    			}
+                    		?>
+                    		>Vollkorn</option>
+                    		<option value="<?php bloginfo('template_url'); ?>/fonts/Droid_Serif_400-Droid_Serif_700-Droid_Serif_italic_400-Droid_Serif_italic_700.font.js"
+                    		<?php
+                    			if(get_option('portraiture_cufon_font') == get_bloginfo('template_url') . "/fonts/Droid_Serif_400-Droid_Serif_700-Droid_Serif_italic_400-Droid_Serif_italic_700.font.js") 
+                    			{
+                    				echo "selected=selected"; 
+                    			}
+                    		?>
+                    		>Droid</option>
+                    		<option value="<?php bloginfo('template_url'); ?>/fonts/Bergamo_Std_400-Bergamo_Std_700-Bergamo_Std_italic_400-Bergamo_Std_italic_700.font.js"
+                    		<?php
+                    			if(get_option('portraiture_cufon_font') == get_bloginfo('template_url') . "/fonts/Bergamo_Std_400-Bergamo_Std_700-Bergamo_Std_italic_400-Bergamo_Std_italic_700.font.js") 
+                    			{
+                    				echo "selected=selected"; 
+                    			}
+                    		?>
+                    		>Bergamo</option>
+                    	</select>
+                        <p><small>Select a Font you want to replace your heading with. By default Gentium will be used.</small></p>
+                    </td>
+                </tr>
                 <tr>
                     <td width="30%"><label for="portraiture_google_analytics">Google Analytics Code</label></td>
                     <td width="70%">
@@ -60,7 +100,7 @@ eg. http://feeds.feedburner.com/neerajkumar/JOUP</small></p>
             </tfoot>
         </table>
         <input type="hidden" name="action" value="update" />
-        <input type="hidden" name="page_options" value="portraiture_home_url,portraiture_google_analytics,portraiture_flickr_api_key,portraiture_flickr_screenname,portraiture_feed_url,portraiture_hyperlink_color" />
+        <input type="hidden" name="page_options" value="portraiture_home_url,portraiture_google_analytics,portraiture_flickr_api_key,portraiture_flickr_screenname,portraiture_feed_url,portraiture_hyperlink_color,portraiture_cufon_font" />
     </form>
     <h3> Share The Love!</h3>
 	<p>If you liked what I have done, then please spread the word!</p>

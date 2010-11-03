@@ -2,14 +2,13 @@
 //// Create the function to output the contents of our Dashboard Widget
 
 function portraiture_dashboard_widget_function() {
-	//portraiture_feed();
-	portraiture_check_for_updates();
+	neerajkumar_name_feed();
 }
 
 // Create the function use in the action hook
 
 function portraiture_add_dashboard_widgets() {
-	wp_add_dashboard_widget('portraiture_dashboard_widget', 'Portraiture Theme News', 'portraiture_dashboard_widget_function');
+	wp_add_dashboard_widget('portraiture_dashboard_widget', 'neerajkumar.name\'s Feed', 'portraiture_dashboard_widget_function');
 
 	// Globalize the metaboxes array, this holds all the widgets for wp-admin
 
