@@ -50,7 +50,19 @@ a:hover {
 .blog .post .excerpt a {
 	color: rgba(0,0,0,0.6);	
 }
-/*.blog .post .content {
+
+.single.single-post .post {
+	width: 700px;
+	margin: 0 auto;
+}
+.single.single-post .post .title {
+	font-size: 50px;
+}
+.single.single-post .post .excerpt {
+	font-size: 30px;
+}
+
+.single.single-post .post .content {
 	letter-spacing: 0.01rem;
 	font-weight: 400;
 	font-style: normal;
@@ -65,16 +77,11 @@ a:hover {
 	margin-right: 0px;
 	margin-top: 0px;
 }
-*/
-.single.single-post .post {
-	width: 700px;
-	margin: 0 auto;
-}
-.single.single-post .post .title {
-	font-size: 50px;
-}
-.single.single-post .post .excerpt {
-	font-size: 30px;
+
+
+.blog .page_nav_links {
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 .footer {
 	width: 700px;

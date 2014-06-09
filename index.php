@@ -28,6 +28,12 @@
 				endwhile;
 			endif;
 			?>
-			<?php posts_nav_link(); ?>
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="page_nav_links">
+						<p><small><?php posts_nav_link(); ?></small></p>
+					</div>
+				</div>
+			</div>
 		</div>
 <?php get_footer(); ?>
