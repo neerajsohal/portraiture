@@ -9,49 +9,48 @@
 	License URI: 
 	Tags:
 */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+body {
+	font-family: 'Open Sans', sans-serif;
+}
 a:hover {
 	text-decoration:  none;
 }
-.post {
+.blog .posts {
 	width: 700px;
 	margin: 0 auto;
+}
+.blog .post {
 	padding-bottom: 50px;
 	padding-top: 50px;
-	border-bottom: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
-.post .category {
+.blog .post .category {
 	margin-bottom: .5em;
+	font-size: 13px;
 }
-.post .category a {
-	color: rgba(0,0,0,0.3);
+.blog .post .category a {
+	color: rgba(0, 0, 0, 0.3);
 }
-.post .title {
-	letter-spacing: -0.02em;
+.blog .post .title {
 	font-weight: 700;
-	font-style: normal;
-	display: block;
 	font-size: 28px;
-	line-height: 1.1;
-	color: rgba(0,0,0,0.8);
-	
+	color: rgba(0, 0, 0, 0.8);
 	margin-top: 0;
 }
-.post .title a {
+.blog .post .title a {
 	color: rgba(0,0,0,0.8);
 }
-.post .excerpt {
-	letter-spacing: -0.02em;
+.blog .post .excerpt {
 	font-weight: 300;
-	font-style: normal;
 	font-size: 20px;
-	line-height: 1.2;
 	color: rgba(0,0,0,0.6);
-	
 }
-.post .excerpt a {
+.blog .post .excerpt a {
 	color: rgba(0,0,0,0.6);	
 }
-.post .content {
+/*.blog .post .content {
 	letter-spacing: 0.01rem;
 	font-weight: 400;
 	font-style: normal;
@@ -65,4 +64,21 @@ a:hover {
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
+}
+*/
+.single.single-post .post {
+	width: 700px;
+	margin: 0 auto;
+}
+.single.single-post .post .title {
+	font-size: 50px;
+}
+.single.single-post .post .excerpt {
+	font-size: 30px;
+}
+.footer {
+	width: 700px;
+	margin: 0 auto;
+	padding-top: 30px;
+	padding-bottom: 20px;
 }
