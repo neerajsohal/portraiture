@@ -50,6 +50,9 @@ a:hover {
 .blog .post .excerpt a {
 	color: rgba(0,0,0,0.6);	
 }
+.blog .post .comments {
+	color: rgba(0,0,0,0.3);	
+}
 
 .single.single-post .post {
 	width: 700px;

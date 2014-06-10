@@ -21,6 +21,7 @@
 						<p class="excerpt">
 							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo get_the_excerpt(); ?></a>
 						</p>
+						<p class="comments"><?php comments_number( 'no responses', 'one response', '% responses' ); ?>.</p>
 					</div>
 				</div>
 			</div>
