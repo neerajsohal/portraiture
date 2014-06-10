@@ -11,6 +11,7 @@
 */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -52,6 +53,7 @@ a:hover {
 }
 .blog .post .comments {
 	color: rgba(0,0,0,0.3);	
+	margin: 0;
 }
 
 .single.single-post .post {
@@ -59,28 +61,46 @@ a:hover {
 	margin: 0 auto;
 }
 .single.single-post .post .title {
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: -0.04em;
 	font-size: 50px;
+	line-height: 1.1;
+	margin-bottom: 8px;
+}
+.single.single-post .post .title a {
+	color: rgba(0,0,0,0.8);
 }
 .single.single-post .post .excerpt {
 	font-size: 30px;
+	line-height: 1.1;
+	
+	margin: 0;
+	letter-spacing: -0.02em;
+	font-weight: 300;
+	font-style: normal;
+}
+.single.single-post .post .excerpt a {
+	color: rgba(0,0,0,0.6);
 }
 
 .single.single-post .post .content {
+	font-family: 'PT Serif',Georgia,Cambria,"Times New Roman",Times,serif;
 	letter-spacing: 0.01rem;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 22px;
 	line-height: 1.5;
+	margin-top: 2.5em;
 
 	color: rgba(0,0,0,0.8);
-	line-height: 33px;
-
-	margin-bottom: 30px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
 }
-
+.single.single-post .post .content a {
+	color: #000;
+}
+.single.single-post .post .content p {
+	margin-bottom: 30px;
+}
 
 .blog .page_nav_links {
 	padding-top: 20px;
