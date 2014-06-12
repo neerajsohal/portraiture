@@ -18,6 +18,11 @@ body {
 a:hover {
 	text-decoration:  none;
 }
+.banner {
+	height: 400px;
+	width: 100%;
+	display: block;
+}
 .blog .posts {
 	width: 700px;
 	margin: 0 auto;
