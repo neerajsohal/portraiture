@@ -22,11 +22,14 @@
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
-		<div class="banner">
-			<div class="overlay">
-			</div>
-			<div class="meta">
-				<h1><?php echo bloginfo('name'); ?></h1>
-				<p class="lead"><?php echo bloginfo('description'); ?></p>
+
+		<div class="banner-wrapper">
+			<div class="banner">
+				<div class="overlay">
+				</div>
+				<div class="meta">
+					<h1><?php echo bloginfo('name'); ?></h1>
+					<p class="lead"><?php echo bloginfo('description'); ?></p>
+				</div>
 			</div>
 		</div>

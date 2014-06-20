@@ -25,12 +25,15 @@ a:hover {
 .banner-wrapper {
 	display: block;
 	background-color: #000;
+	width: 100%;
+	height: 400px;
 }
-.banner-wrapper, .banner {
+.banner-wrapper .banner {
 	height: 400px;
 	width: 100%;
+	display: block;
 }
-.blog .banner .meta {
+.banner-wrapper .banner .meta {
 	position: absolute;
 	top: 30%;
 	display: block;
@@ -38,21 +41,21 @@ a:hover {
 	text-align: center;
 	width: 100%;
 }
-.blog .banner .meta h1,.blog  .banner .meta p.lead {
+.banner-wrapper .banner .overlay {
+	background: url('i/alpha.png');
+	position: absolute;
+	width: 100%;
+	height: 400px;
+}
+.banner-wrapper .banner .meta h1, .banner-wrapper .banner .meta p.lead {
 	color: #fff;
 	font-family: 'Merriweather', serif;
 	font-weight: 300;
 }
-.blog .banner .meta h1 {
+.banner-wrapper .banner .meta h1 {
 	/*text-shadow: 0px 0px 2px #ccc;*/
 	font-weight: 700;
 	font-size: 4em;
-}
-.blog .banner .overlay {
-	background: url('i/alpha.png');
-	position: absolute;
-	width: 100%;
-	height: 100%;
 }
 
 .single.single-post .banner-wrapper, .single.single-post .banner {
@@ -68,16 +71,6 @@ a:hover {
 	text-align: center;
 	width: 100%;
 	padding: 0 1em;
-}
-.single.single-post .banner .meta h1, .single.single-post .banner .meta p.lead {
-	color: #fff;
-	font-family: 'Merriweather', serif;
-	font-weight: 300;
-}
-.single.single-post .banner .meta h1 {
-	/*text-shadow: 0px 0px 2px #ccc;*/
-	font-weight: 700;
-	font-size: 4em;
 }
 .single.single-post .banner .overlay {
 	background: url('i/alpha.png');
