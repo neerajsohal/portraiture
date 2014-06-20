@@ -12,11 +12,12 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/site.js"></script>
-		<?php if(strlen(get_header_image()) > 0) { ?>
+		<?php if(strlen(has_post_thumbnail()) > 0) { $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); ?>
 		<script type="text/javascript">
 			$(document).ready(function() {
 
-				$(".banner").backstretch("<?php echo get_header_image(); ?>");
+
+				$(".banner").backstretch("<?php echo $large_image_url[0]; ?>");
 
 			})
 		</script>
