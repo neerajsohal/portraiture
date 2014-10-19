@@ -30,8 +30,8 @@
 				<?php
 				if (have_posts()) :
 				while (have_posts()) : the_post(); ?>
-					<h1><?php echo get_the_title(); ?></h1>
-					<p class="lead"><?php echo get_the_excerpt(); ?></p>
+					<h1 class="title"><?php echo get_the_title(); ?></h1>
+					<p class="lead excerpt"><?php echo get_the_excerpt(); ?></p>
 				<?php
 				endwhile;
 				endif;
