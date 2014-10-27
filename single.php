@@ -7,7 +7,9 @@
 					<div class="content">
 						<?php echo apply_filters('the_content', get_the_content()); ?>
 					</div>
-					
+					<?php if ( is_active_sidebar( 'single_post_footer' ) ) : ?>
+						<?php dynamic_sidebar( 'single_post_footer' ); ?>
+					<?php endif; ?>
 					<?php comments_template(); ?>
 					
 				</div>

@@ -22,6 +22,7 @@
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
+		<?php get_template_part( 'primary', 'navigation' ); ?>
 		<div class="banner-wrapper">
 		<div class="banner">
 			<div class="overlay">
