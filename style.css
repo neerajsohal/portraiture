@@ -118,7 +118,35 @@ a:hover {
 	color: rgba(0,0,0,0.3);	
 	margin: 0;
 }
-
+.post .comments ol.comment-list {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+.post .comments ol.comment-list li {
+	margin-bottom: 2em;
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 1em;
+}
+.comments ol.comment-list li .comment-author.vcard .avatar {
+	margin-right: .5em;
+}
+.comments ol.comment-list li .comment-meta {
+	font-size: .8em;
+	margin-top: .5em;
+	margin-bottom: .7em;
+}
+.comments ol.comment-list li .reply {
+	font-size: .8em;
+}
+.post #respond {
+	
+}
+.post #respond label {
+	display: block;
+}
+.post #respond .form-allowed-tags > code {
+	white-space: normal;
+}
 .single.single-post .post {
 	max-width: 700px;
 	margin: 0 auto;
@@ -163,6 +191,12 @@ a:hover {
 	color: #000;
 }
 .single.single-post .post .content p {
+	margin-bottom: 30px;
+}
+.single.single-post .post .comments {
+	border-top: 1px solid #f5f5f5;
+	margin-top: 50px;
+	padding-top: 10px;
 	margin-bottom: 30px;
 }
 
