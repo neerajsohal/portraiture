@@ -29,3 +29,12 @@ function portraiture_widgets_init() {
 add_action( 'widgets_init', 'portraiture_widgets_init' );
 
 remove_filter('term_description','wpautop'); 
+
+function is_paginated() {
+    global $wp_query;
+    if ( $wp_query->max_num_pages > 1 ) {
+        return true;
+    } else {
+        return false;
+    }
+}

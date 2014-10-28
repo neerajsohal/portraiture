@@ -115,27 +115,27 @@ a:hover {
 	color: rgba(0,0,0,0.6);	
 }
 .post .comments {
-	color: rgba(0,0,0,0.3);	
+	/*color: rgba(0,0,0,0.3);	*/
 	margin: 0;
 }
-.post .comments ol.comment-list {
+.post .comments ol.commentlist {
 	margin: 0; padding: 0;
 	list-style: none;
 }
-.post .comments ol.comment-list li {
+.post .comments ol.commentlist li {
 	margin-bottom: 2em;
 	border-bottom: 1px solid #f0f0f0;
 	padding-bottom: 1em;
 }
-.comments ol.comment-list li .comment-author.vcard .avatar {
+.comments ol.commentlist li .comment-author.vcard .avatar {
 	margin-right: .5em;
 }
-.comments ol.comment-list li .comment-meta {
+.comments ol.commentlist li .comment-meta {
 	font-size: .8em;
 	margin-top: .5em;
 	margin-bottom: .7em;
 }
-.comments ol.comment-list li .reply {
+.comments ol.commentlist li .reply {
 	font-size: .8em;
 }
 .post #respond {

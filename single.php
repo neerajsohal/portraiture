@@ -10,12 +10,14 @@
 					<?php if ( is_active_sidebar( 'single_post_footer' ) ) : ?>
 						<?php dynamic_sidebar( 'single_post_footer' ); ?>
 					<?php endif; ?>
-					<?php comments_template(); ?>
-					
+					<div class="comments" class="comments-area">
+						<?php comments_template(); ?>
+					</div>
 				</div>
 			</div>
 		</div>
 		<?php endwhile; endif; ?>
+		<?php if(is_paginated()) { ?>
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="page_nav_links">
@@ -23,5 +25,6 @@
 				</div>
 			</div>
 		</div>
+		<?php } ?>
 	</div>
 <?php get_footer('single'); ?>
